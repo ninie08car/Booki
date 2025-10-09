@@ -283,7 +283,7 @@ header{
 }
 
 .hebergements-cards .card{
-    height: 207px;
+    height: 100%;
 }
 
 .hebergements-cards img {
@@ -419,7 +419,7 @@ header{
 .footer-content{
     padding: 20px;
     width: 446px;
-    height: 163px;
+    height: auto;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -619,5 +619,7 @@ header{
     .footer-container{
         display: flex;
         flex-direction: column;
+        padding: 30px;
+        gap: 30px;
     }   
 }
