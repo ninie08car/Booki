@@ -368,15 +368,14 @@ header{
 /*Activités*/
 
 .activites{
-    margin: 35px
+    padding: 30px
 }
 
 .activites-cards {
     display: flex;
     flex-direction: row;
     margin-top: 33px;
-    padding: 0;
-    padding-bottom: 35px;
+    margin-bottom: 35px;
     width: 100%;
     gap: 30px;
     flex-wrap: wrap;
@@ -404,6 +403,10 @@ header{
 }
 .activites .card{
     padding: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 /*Footer*/
@@ -438,6 +441,9 @@ header{
     .hebergements {
         width: 100%;
     }
+    .hebergements-cards .card{
+    height: auto;
+}
 
     .populaires {
         width: 100%;
@@ -518,9 +524,16 @@ header{
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
-        gap: 35px;
     }
-   
+    .search-form{
+        width: 100%;
+    }
+    .icon-left{
+        width: 60px;
+    }
+    .search-form input{
+        width: 100%;
+    }
      .search-button {
         display: flex;
         justify-content: center;
