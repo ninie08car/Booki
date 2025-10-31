@@ -92,7 +92,10 @@ header{
     cursor: pointer;
     width: 108px;
     height: 19px;
-    gap: 68px;
+    gap:50px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
 }
 
 .nav-button:hover::after {
@@ -174,7 +177,7 @@ header{
   font-size: 18px;
   font-weight:bold;
   margin-right: 8px;
-  display: none; /* ❌ caché par défaut (desktop) */
+  display: none;
 }
 
 .search-button span {
@@ -199,6 +202,7 @@ header{
 .filter-title{
     height: 21px;
     font-size: 18px;
+    padding-top: 30px;
 }
 
 .button-container{
@@ -213,12 +217,14 @@ header{
     width: auto;
     height: 49px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 20px;
+    white-space: nowrap;
 }
 
 .filter-button:hover {
@@ -228,25 +234,25 @@ header{
 .info-bar {
   display: flex;
   align-items: center;
-  gap: 8px; /* espace entre l’icône et le texte */
+  gap: 8px; 
   margin-top: 35px;
   margin-bottom: 35px;
 }
 
 .image-container {
-  width: 24px;                  /* taille du cercle */
+  width: 24px;                 
   height: 24px;
   background-color:transparent;
   border: 1px solid #F2F2F2;
-  border-radius: 50%;           /* cercle parfait */
+  border-radius: 50%;           
   display: flex;
-  align-items: center;          /* centre verticalement l’icône */
-  justify-content: center;      /* centre horizontalement l’icône */
+  align-items: center;       
+  justify-content: center;      
 }
 
 .image-container i {
-  font-size: 12px;              /* taille de l’icône */
-  color: blue;                  /* couleur de l’icône */
+  font-size: 12px;             
+  color: blue;                 
 }
 
 /****** Hebergements And Populaires ***********/
@@ -418,7 +424,8 @@ header{
 
 .footer-content{
     padding: 20px;
-    width: 446px;
+    width: 100%;
+    max-width: 446px;
     height: auto;
 }
 
@@ -433,7 +440,6 @@ header{
         text-align: left;
         align-items: flex-start
     }
-
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -443,7 +449,11 @@ header{
     }
     .hebergements-cards .card{
     height: auto;
-}
+    }
+    .hebergements-cards h3{
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
     .populaires {
         width: 100%;
@@ -480,6 +490,9 @@ header{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    .footer-content{
+        width: auto;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -491,8 +504,7 @@ header{
         margin: 0;
     }
     .main-container{
-        padding: 0;
-        box-sizing: border-box;
+        padding: 0 20px;
     }
     .header{
         display: flex;
@@ -509,7 +521,9 @@ header{
     .nav-button{
         width: 50%;
         padding-bottom: 30px;
-        border-bottom:2px solid white;
+        border-bottom:2px solid #F2F2F2;
+        gap:0px 
+        
 
     }
     .nav-button:hover {
@@ -532,7 +546,8 @@ header{
         width: 60px;
     }
     .search-form input{
-        width: 100%;
+        min-width: 0;
+        flex: 1;
     }
      .search-button {
         display: flex;
@@ -540,25 +555,29 @@ header{
         align-items: center;
         width: 50px;
         height: 50px;
-        border-radius: 15px; /* ✅ arrondi complet */
+        border-radius: 15px; 
         margin-left: -10px;
         box-shadow: 0px 5px 5px #F2F2F2;
     }
 
     .search-button i {
-        display: inline-block; /* ✅ réapparaît sur mobile */
+        display: inline-block; 
         color: white;
         padding-left: 10px;
     }
 
     .search-button span {
-        display: none; /* ❌ texte caché si tu veux ne garder que l’icône */
+        display: none; 
     }
 
     .filter-bar{
         display: flex;
         flex-direction: column;
     } 
+    .filter-button{
+        padding:0;
+    }
+
     .button-container{
         display: flex;
         justify-content: center;
@@ -606,10 +625,14 @@ header{
     .activites-cards{
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: stretch;
         gap: 30px;
     }
     .activites-cards img{
-        height: 147px;
+        height: auto;
+        aspect-ratio: 16/9;
     }
      .activites {
     padding: 30px;
